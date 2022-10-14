@@ -1,0 +1,31 @@
+const http=require('http'); //module
+let data=[{
+    'name':'saurabh',
+    'age':22,
+    'email':'saurabh@cybage.com',
+    'maretial_status':'Unmarried'
+},
+{
+    'name':'vibhanshu',
+    'age':21,
+    'email':'vibhanshu@cybage.com',
+    'maretial_status':'Unmarried'
+},
+{
+    'name':'kshitij',
+    'age':23,
+    'email':'kshitij@cybage.com',
+    'maretial_status':'Unmarried'
+},
+{
+    'name':'Swamini',
+    'age':22,
+    'email':'swamini@cybage.com',
+    'maretial_status':'Unmarried'
+},]
+http.createServer(
+    function(request,response){
+        response.write(JSON.stringify(data));
+        response.end();
+    }
+).listen(2000);
